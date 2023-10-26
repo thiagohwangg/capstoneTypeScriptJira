@@ -198,7 +198,7 @@ export default function ProjectList({}: Props) {
       key: "id",
       render(value, record, index) {
         return (
-          <>
+          <div  style={{display:"flex", alignItems: "center", justifyContent: "left"}}>
             <Popover
               placement="topLeft"
               title={"Members"}
@@ -251,10 +251,10 @@ export default function ProjectList({}: Props) {
               }}
               trigger="hover"
             >
-              <button className="bg-none">
+              <button className="bg-none" style={{paddingTop:5, paddingRight:5 }}>
                 <Avatar.Group
                   maxCount={2}
-                  maxStyle={{ color: "#f56a00", backgroundColor: "#fde3cf" }}
+                  maxStyle={{ color: "#f56a00", backgroundColor: "#fde3cf"}}
                   key={index}
                 >
                   {record.members.map((member, index) => {
@@ -318,7 +318,7 @@ export default function ProjectList({}: Props) {
                 +
               </Button>
             </Popover>
-          </>
+          </div>
         );
       },
     },
